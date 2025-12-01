@@ -132,24 +132,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ==================== EFEITO SCROLL NAVBAR ==================== 
-let lastScrollTop = 0;
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-
-  if (scrollTop > lastScrollTop) {
-    // Scrollando para baixo
-    navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
-  } else {
-    // Scrollando para cima
-    navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-  }
-
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-});
-
 // ==================== RIPPLE EFFECT ==================== 
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('.cta-button');
